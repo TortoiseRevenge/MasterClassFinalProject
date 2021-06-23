@@ -1,11 +1,14 @@
-﻿using System;
+﻿using CodeTheWay.Web.Ui.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace CodeTheWay.Web.Ui.Services
 {
-    public class IBarrelService
+    public interface IBarrelService
     {
+        public Task<Barrel> Create(Barrel barrel);
+
     }
 }

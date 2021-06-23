@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CodeTheWay.Web.Ui.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,47 @@ namespace CodeTheWay.Web.Ui.Controllers
             this.BarrelService = barrelService;
         }
 
+        public async Task<IActionResult> Create()
+        {
+            return View(new BarrelViewModel());
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> Register(BarrelViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                if (model.Height > 0)
+                {
+                    if (model.Radius > 0)
+                    {
+                        if (model.Weight > 0)
+                        {
+
+                            Barrel barrel = new Barrel()
+                            {
+                                Id = model.Id,
+                                Weight = model.Weight,
+                                Radius = model.Radius,
+                                Height = model.Height,
+                                Contents = model.Contents,
+                                Owner = model.Owner,
+                                Sender = model.Sender,
+                                Receiver = model.Receiver,
+                                SpecialInstruction = model.SpecialInstruction,
+                                isShipping = model.isShipping,
+                                GetLatitude = model.GetLatitude,
+                                GetLongitude = model.GetLongitude,
+                            };
+                            var result = await BarrelService.Create(barrel);
+                            return RedirectToAction("Index");
+                        }
+                    }
+                }
+
+            }
+            return View("Create", model);
+        }
     }
 }

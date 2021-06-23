@@ -25,6 +25,7 @@ namespace CodeTheWay.Web.Ui.Models.ViewModels
         public string Receiver { get; set; }
 
         public string SpecialInstruction { get; set; }
+        
         public bool isShipping { get; set; }
 
 
