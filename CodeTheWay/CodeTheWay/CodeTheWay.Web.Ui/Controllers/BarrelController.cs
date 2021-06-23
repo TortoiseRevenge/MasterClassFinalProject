@@ -18,5 +18,10 @@ namespace CodeTheWay.Web.Ui.Controllers
             this.BarrelService = barrelService;
         }
 
+        public async Task<IActionResult> Index()
+        {
+            return View(await BarrelService.GetBarrels());
+        }
+
     }
 }

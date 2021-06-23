@@ -1,8 +1,9 @@
-﻿using System;
+﻿using CodeTheWay.Web.Ui.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CodeTheWay.Web.Ui.Models;
 
 namespace CodeTheWay.Web.Ui.Repositories
 {
@@ -15,5 +16,11 @@ namespace CodeTheWay.Web.Ui.Repositories
             this.AppDbContext = dbContext;
         }
 
+        public async Task<List<Barrel>> GetBarrels()
+        {
+            return await this.AppDbContext.Barrels.ToListAsync();
+
+
+        }
     }
 }

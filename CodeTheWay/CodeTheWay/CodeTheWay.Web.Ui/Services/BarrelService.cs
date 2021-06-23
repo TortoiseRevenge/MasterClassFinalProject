@@ -7,13 +7,18 @@ using CodeTheWay.Web.Ui.Models;
 
 namespace CodeTheWay.Web.Ui.Services
 {
-    public class BarrelService
+    public class BarrelService : IBarrelService
     {
         private IBarrelRepository BarrelRepo;
 
         public BarrelService(AppDbContext dbContext)
         {
             this.BarrelRepo = new BarrelRepository(dbContext);
+        }
+
+        public async Task<List<Barrel>> GetBarrels()
+        {
+            return await this.BarrelRepo.GetBarrels();
         }
     }
 }
