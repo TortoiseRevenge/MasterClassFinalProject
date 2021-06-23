@@ -39,5 +39,25 @@ namespace CodeTheWay.Web.Ui.Controllers
             return (View(barrel));
         }
         
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await BarrelService.GetBarrels());
+        }
+
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var Barrel = await BarrelService.GetBarrel(id);
+            return View(Barrel);
+        }
+        public async Task<IActionResult> Update(Barrel model) {
+            if (ModelState.IsValid) {
+                var Barrel = await BarrelService.Update(model);
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+        
+
     }
 }

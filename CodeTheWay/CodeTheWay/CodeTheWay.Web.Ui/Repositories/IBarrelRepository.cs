@@ -8,7 +8,8 @@ namespace CodeTheWay.Web.Ui.Repositories
 {
     public interface IBarrelRepository
     {
-        public Task<List<Barrel>> GetBarrel();
+        public Task<List<Barrel>> GetBarrels();
         public Task<Barrel> GetBarrel(Guid id);
+        public Task<Barrel> Update(Barrel model);
     }
 }

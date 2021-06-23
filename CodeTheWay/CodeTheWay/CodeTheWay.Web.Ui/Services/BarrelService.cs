@@ -7,7 +7,7 @@ using CodeTheWay.Web.Ui.Models;
 
 namespace CodeTheWay.Web.Ui.Services
 {
-    public class BarrelService
+    public class BarrelService : IBarrelService
     {
         private IBarrelRepository BarrelRepo;
 
@@ -15,13 +15,18 @@ namespace CodeTheWay.Web.Ui.Services
         {
             this.BarrelRepo = new BarrelRepository(dbContext);
         }
-        public async Task<List<Barrel>> GetBarrel()
+
+        public async Task<List<Barrel>> GetBarrels()
         {
-            return await this.BarrelRepo.GetBarrel();
+            return await this.BarrelRepo.GetBarrels();
         }
         public async Task<Barrel> GetBarrel(Guid id)
         {
             return await this.BarrelRepo.GetBarrel(id);
+        }
+        public async Task<Barrel> Update(Barrel model)
+        {
+            return await this.BarrelRepo.Update(model);
         }
     }
 }
