@@ -3,19 +3,63 @@
     ViewData["Title"] = "Details";
 *@
 <h1>Details</h1>
-<p>Id: @Model.Id</p>
-<p>Weight: @Model.Weight</p>
-<p>Radius: @Model.Radius</p>
-<p>Height: @Model.Height</p>
-<p>Contents: @Model.Contents</p>
-<p>Owner: @Model.Owner</p>
-<p>Sender: @Model.Sender</p>
-<p>Receiver: @Model.Receiver</p>
-<p>SpecialInstruction: @Model.SpecialInstruction</p>
-<p>Longitude: @Model.GetLongitude</p>
-<p>Latitude: @Model.GetLatitude</p>
-<p>Shipping: @Model.isShipping</p>
+<div class="container-fluid table-responsive">
+<table class="table table-hover table-striped">
+    <tr>
+    <td>Id:</td>
+    <td>@Model.Id</td>
+    </tr>
+    <tr>
+    <td>Weight:</td>
+    <td>@Model.Weight</td>
+    </tr>
+    <tr>
+    <td>Radius:</td>
+    <td>@Model.Radius</td>
+    </tr>
+    <tr>
+    <td>Height:</td>
+    <td>@Model.Height</td>
+    </tr>
+    <tr>
+    <td>Contents:</td>
+    <td>@Model.Contents</td>
+    </tr>
+    <tr>
+    <td>Contents:</td> 
+    <td>@Model.Contents</td>
+    </tr>
+    <tr>
+    <td>Owner:</td>
+    <td>@Model.Owner</td>
+    </tr>
+    <tr>
+    <td>Sender:</td> 
+    <td>@Model.Sender</td>
+    </tr>
+    <tr>
+    <td>Receiver:</td>
+    <td>@Model.Receiver</td>
+    </tr>
+    <tr>
+    <td>SpecialInstruction:</td> 
+    <td>@Model.SpecialInstruction</td>
+    </tr>
+    <tr>
+    <td>Longitude:</td> 
+    <td>@Model.GetLongitude</td>
+    </tr>
+    <tr>
+    <td>Latitude:</td> 
+    <td>@Model.GetLatitude</td>
+    </tr>
+    <tr>
+    <td>Shipping:</td> 
+    <td>@Model.isShipping</td>
+    </tr>
 
+</table>
+</div>
 
 <div>
     <a asp-action="Index">Back to List</a>
