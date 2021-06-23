@@ -15,5 +15,13 @@ namespace CodeTheWay.Web.Ui.Services
         {
             this.BarrelRepo = new BarrelRepository(dbContext);
         }
+        public async Task<List<Barrel>> GetBarrel()
+        {
+            return await this.BarrelRepo.GetBarrel();
+        }
+        public async Task<Barrel> GetBarrel(Guid id)
+        {
+            return await this.BarrelRepo.GetBarrel(id);
+        }
     }
 }
