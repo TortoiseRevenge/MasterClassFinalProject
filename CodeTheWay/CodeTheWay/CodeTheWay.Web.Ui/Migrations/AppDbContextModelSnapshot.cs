@@ -16,6 +16,50 @@ namespace CodeTheWay.Web.Ui.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.15");
 
+            modelBuilder.Entity("CodeTheWay.Web.Ui.Models.Barrel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Contents")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("GetLatitude")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("GetLongitude")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Height")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Owner")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("Radius")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Receiver")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Sender")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SpecialInstruction")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("Weight")
+                        .HasColumnType("REAL");
+
+                    b.Property<bool>("isShipping")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Barrels");
+                });
+
             modelBuilder.Entity("CodeTheWay.Web.Ui.Models.Student", b =>
                 {
                     b.Property<Guid>("Id")
