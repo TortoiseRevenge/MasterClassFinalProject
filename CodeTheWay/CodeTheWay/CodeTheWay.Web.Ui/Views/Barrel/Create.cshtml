@@ -59,7 +59,7 @@
         </div>
         <div class="form-group">
             <label asp-for="isShipping" class="control-label">Is it Shipping?</label>
-            <input asp-for="isShipping" class="form-control" oninput="showHideClass('shipping')/>
+            <input asp-for="isShipping" class="form-control" oninput="showHideClass('shipping')"/>
             <span asp-validation-for="isShipping" class="text-danger"></span>
         </div>
         <div class="form-group">
@@ -79,25 +79,7 @@
     <div align="center">
         <button class="btn btn-back"><a asp-action="Index">Back to List</a></button>
     </div>
-<div class="footer-basic">
-    <footer>
-        
-        <img src="../Views/202px-Great_Seal_of_the_United_States_(obverse).svg.png" id="center" width="200" height="40">
-        <br />
 
-        <ul class="list-inline">
-            <li class="list-inline-item"><a asp-action="" asp-controller="">Home</a></li>
-            <li class="list-inline-item"><a asp-action="" asp-controller="Barrel">Government Barrels</a></li>
-
-            <li class="list-inline-item"><a asp-action="Create" asp-controller="Barrel">Create</a></li>
-            <li class="list-inline-item"><a asp-action="Privacy" asp-controller="">Privacy</a></li>
-
-            <li class="list-inline-item"><a href="https://www.archives.gov/founding-docs/constitution-transcript">Terms & Conditions</a></li>
-
-        </ul>
-        <p class="copyright">United States Government © 1776</p>
-    </footer>
-</div>
 
 
 @section Scripts {
