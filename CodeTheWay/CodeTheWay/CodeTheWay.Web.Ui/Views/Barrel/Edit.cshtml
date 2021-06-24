@@ -2,6 +2,7 @@
 @*
     ViewData["Title"] = "Edit";
 *@
+<div class="PadForAdam">
 <h1>Edit</h1>
 <form asp-action="Update">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -71,6 +72,7 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+    </div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
