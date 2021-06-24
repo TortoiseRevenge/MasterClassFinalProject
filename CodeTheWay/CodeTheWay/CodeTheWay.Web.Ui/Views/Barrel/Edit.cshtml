@@ -1,4 +1,4 @@
-﻿@model CodeTheWay.Web.Ui.Models.Barrel
+﻿@model CodeTheWay.Web.Ui.Models.ViewModels.BarrelViewModel
 @*
     ViewData["Title"] = "Edit";
 *@
@@ -46,22 +46,22 @@
         <span asp-validation-for="Receiver" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="SpecialInstruction" class="control-label"></label>
+        <label asp-for="SpecialInstruction" class="control-label">Special Instruction</label>
         <input asp-for="SpecialInstruction" class="form-control" value=@Model.SpecialInstruction />
         <span asp-validation-for="SpecialInstruction" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="isShipping" class="control-label"></label>
+        <label asp-for="isShipping" class="control-label">Is it Shipping?</label>
         <input asp-for="isShipping" class="form-control" value=@Model.isShipping />
         <span asp-validation-for="isShipping" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="GetLongitude" class="control-label"></label>
+        <label asp-for="GetLongitude" class="control-label">Longitude</label>
         <input asp-for="GetLongitude" class="form-control" value=@Model.GetLongitude />
         <span asp-validation-for="GetLongitude" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="GetLatitude" class="control-label"></label>
+        <label asp-for="GetLatitude" class="control-label">Latitude</label>
         <input asp-for="GetLatitude" class="form-control" value=@Model.GetLatitude />
         <span asp-validation-for="GetLatitude" class="text-danger"></span>
     </div>
@@ -69,8 +69,8 @@
         <input type="submit" value="Submit" class="btn btn-primary" />
     </div>
 </form>
-<div>
-    <a asp-action="Index">Back to List</a>
+<div align="center">
+    <button class="btn btn-back"><a asp-action="Index">Back to List</a></button>
 </div>
     </div>
 @section Scripts {
