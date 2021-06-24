@@ -43,26 +43,25 @@
         <span asp-validation-for="Receiver" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="SpecialInstruction" class="control-label"></label>
+        <label asp-for="SpecialInstruction" class="control-label">Special Instruction</label>
         <input asp-for="SpecialInstruction" class="form-control" />
         <span asp-validation-for="SpecialInstruction" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="isShipping" class="control-label"></label>
+        <label asp-for="isShipping" class="control-label">Is it Shipping?</label>
         <input asp-for="isShipping" class="form-control" />
         <span asp-validation-for="isShipping" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="GetLatitude" class="control-label"></label>
-        <input asp-for="GetLatitude" class="form-control" />
-        <span asp-validation-for="GetLatitude" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="GetLongitude" class="control-label"></label>
+        <label asp-for="GetLongitude" class="control-label">Longitude</label>
         <input asp-for="GetLongitude" class="form-control" />
         <span asp-validation-for="GetLongitude" class="text-danger"></span>
     </div>
-  
+    <div class="form-group">
+        <label asp-for="GetLatitude" class="control-label">Latitude</label>
+        <input asp-for="GetLatitude" class="form-control" />
+        <span asp-validation-for="GetLatitude" class="text-danger"></span>
+    </div>
     <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary" />
     </div>
