@@ -3,51 +3,77 @@
     ViewData["Title"] = "Index";
 *@
 
-<table class="table table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>
-                Contents
-            </th>
-            <th>
-                Weight
-            </th>
-            <th>
-                Owner
-            </th>
-            <th>
-                Options
-            </th>
-        </tr>
-    </thead>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contents)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Owner)
-            </td>
-            <td>
-                <div>
-                    <div>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.Id })
-                    </div>
-                </div>
-                <div>
-                    @Html.ActionLink("Details", "Details", new { id = item.Id })
-                </div>
-                <div>
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </div>
-            </td>
-        </tr>
-    }
-</table>
-<div>
-    <a asp-action="Create">Create a Shipping Container.</a>
+
+    
+<div id="videoBounds">
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4" type="video/mp4">
+    </video>
+   
+    <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+                <h1 class="display-3">Our Barrels</h1>
+                <p class="lead mb-0">The best storage system in the world!</p>
+            </div>
+        </div>
+    </div>
 </div>
+        
+    
+
+
+            <div class="container-fluid pr-sm-4 pl-sm-4">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>
+                                Contents
+                            </th>
+                            <th>
+                                Weight
+                            </th>
+                            <th>
+                                Owner
+                            </th>
+                            <th>
+                                Options
+                            </th>
+                        </tr>
+                    </thead>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Contents)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Weight)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Owner)
+                            </td>
+                            <td>
+                                <div>
+                                    <div>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                                    </div>
+                                </div>
+                                <div>
+                                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                                </div>
+                                <div>
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </table>
+
+                <div>
+                    <a asp-action="Create">Create a Shipping Container.</a>
+                </div>
+            </div>
+
+
