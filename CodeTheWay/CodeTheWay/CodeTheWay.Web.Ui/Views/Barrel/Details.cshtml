@@ -1,21 +1,74 @@
-﻿@model CodeTheWay.Web.Ui.Models.ViewModels.BarrelViewModel
+﻿@model CodeTheWay.Web.Ui.Models.ViewModels.BarrelViewModel    
 @*
     ViewData["Title"] = "Details";
 *@
+<html>
+<head>
+    <script src="~/js/showhide.js"></script>
+</head>
+<body onpageshow="showHideClass('shipping')">  
+    <script type="text/javascript">
+    @if (Model.isShipping == true)
+    {
+        @:showHideClass('shipping');
+    }
+    </script>    
 <h1>Details</h1>
-<p>Id: @Model.Id</p>
-<p>Weight: @Model.Weight</p>
-<p>Radius: @Model.Radius</p>
-<p>Height: @Model.Height</p>
-<p>Contents: @Model.Contents</p>
-<p>Owner: @Model.Owner</p>
-<p>Sender: @Model.Sender</p>
-<p>Receiver: @Model.Receiver</p>
-<p>SpecialInstruction: @Model.SpecialInstruction</p>
-<p>Longitude: @Model.GetLongitude</p>
-<p>Latitude: @Model.GetLatitude</p>
-<p>Shipping: @Model.isShipping</p>
+<div class="container-fluid table-responsive">
+    <table class="table table-hover table-striped">
+        <tr>
+            <td><h4>Id:</h4></td>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <td><h4>Weight:</h4></td>
+            <td>@Model.Weight</td>
+        </tr>
+        <tr>
+            <td><h4>Radius:</h4></td>
+            <td>@Model.Radius</td>
+        </tr>
+        <tr>
+            <td><h4>Height:</h4></td>
+            <td>@Model.Height</td>
+        </tr>
+        <tr>
+            <td><h4>Contents:</h4></td>
+            <td>@Model.Contents</td>
+        </tr>
+        <tr>
+            <td><h4>Owner:</h4></td>
+            <td>@Model.Owner</td>
+        </tr>      
+        <tr class="shipping">
+            <td><h4>Sender:</h4></td>
+            <td>@Model.Sender</td>
+        </tr>
+        <tr class="shipping">
+            <td><h4>Receiver:</h4></td>
+            <td>@Model.Receiver</td>
+        </tr>
+        <tr class="shipping">
+            <td><h4>SpecialInstruction:</h4></td>
+            <td>@Model.SpecialInstruction</td>
+        </tr>
+        <tr>
+            <td><h4>Longitude:</h4></td>
+            <td>@Model.GetLongitude</td>
+        </tr>
+        <tr>
+            <td><h4>Latitude:</h4></td>
+            <td>@Model.GetLatitude</td>
+        </tr>
+        <tr>
+            <td><h4>Shipping:</h4></td>
+            <td>@Model.isShipping</td>
+        </tr>
 
+    </table>
+</div>
+</body>
+</html>
 
 <div>
     <a asp-action="Index">Back to List</a>
