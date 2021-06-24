@@ -35,24 +35,24 @@
         <input asp-for="Owner" class="form-control" value=@Model.Owner />
         <span asp-validation-for="Owner" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="form-group, shipping">
         <label asp-for="Sender" class="control-label"></label>
         <input asp-for="Sender" class="form-control" value=@Model.Sender />
         <span asp-validation-for="Sender" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="form-group, shipping">
         <label asp-for="Receiver" class="control-label"></label>
         <input asp-for="Receiver" class="form-control" value=@Model.Receiver />
         <span asp-validation-for="Receiver" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="form-group, shipping">
         <label asp-for="SpecialInstruction" class="control-label">Special Instruction</label>
         <input asp-for="SpecialInstruction" class="form-control" value=@Model.SpecialInstruction />
         <span asp-validation-for="SpecialInstruction" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="isShipping" class="control-label">Is it Shipping?</label>
-        <input asp-for="isShipping" class="form-control" value=@Model.isShipping />
+        <input asp-for="isShipping" class="form-control" value=@Model.isShipping oninput="showHideClass('shipping')"/>
         <span asp-validation-for="isShipping" class="text-danger"></span>
     </div>
     <div class="form-group">
