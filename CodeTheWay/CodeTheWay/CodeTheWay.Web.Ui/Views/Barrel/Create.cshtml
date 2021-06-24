@@ -10,6 +10,7 @@
     <script src=".\showhide.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="~/css/site.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
     <h1>Create</h1>
@@ -79,16 +80,21 @@
     </div>
 <div class="footer-basic">
     <footer>
+        
+        <img src="../Views/202px-Great_Seal_of_the_United_States_(obverse).svg.png" id="center" width="200" height="40">
+        <br />
 
         <ul class="list-inline">
-            <li class="list-inline-item"><a href="../Views/Barrel/Index.cshtml">Home</a></li>
-            <li class="list-inline-item"><a href="../Views/Barrel/Details.cshtml">Details</a></li>
-            <li class="list-inline-item"><a href="../Views/Barrel/Edit.cshtml">Edit</a></li>
-            <li class="list-inline-item"><a href="../Views/Barrel/Create.cshtml">Create</a></li>
+            <li class="list-inline-item"><a asp-action="" asp-controller="">Home</a></li>
+            <li class="list-inline-item"><a asp-action="" asp-controller="Barrel">Government Barrels</a></li>
+
+            <li class="list-inline-item"><a asp-action="Create" asp-controller="Barrel">Create</a></li>
+            <li class="list-inline-item"><a asp-action="Privacy" asp-controller="">Privacy</a></li>
+
             <li class="list-inline-item"><a href="https://www.archives.gov/founding-docs/constitution-transcript">Terms & Conditions</a></li>
 
         </ul>
-        <p class="copyright">Company Name © 2018</p>
+        <p class="copyright">United States Government © 1776</p>
     </footer>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
