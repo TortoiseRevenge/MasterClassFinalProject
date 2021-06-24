@@ -131,3 +131,12 @@ body {
     }
 
 /* Credit to https://epicbootstrap.com/snippets/footer-basic */
+
+#center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    max-width: 50%;
+    max-height: 50%;
+}
