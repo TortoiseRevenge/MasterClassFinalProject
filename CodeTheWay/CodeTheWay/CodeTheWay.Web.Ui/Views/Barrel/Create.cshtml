@@ -13,6 +13,7 @@
     <link href="~/css/site.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+<div class="PadForAdam">
     <h1>Create</h1>
     <form asp-action="Register">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -97,8 +98,7 @@
         <p class="copyright">United States Government © 1776</p>
     </footer>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
